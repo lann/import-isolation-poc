@@ -1,0 +1,2 @@
+dependencies:
+  "isolated:poc/printer": child-component.wasm

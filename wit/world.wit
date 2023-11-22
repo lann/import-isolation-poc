@@ -1,0 +1,13 @@
+package component:printer;
+
+interface printer {
+    print: func(s: string);
+}
+
+world parent {
+    import printer;
+}
+
+world child {
+    export printer;
+}

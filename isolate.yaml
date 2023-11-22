@@ -1,0 +1,15 @@
+dependencies:
+  "component:printer/printer": "child-component.wasm"
+  "isolated-imports": "isolated-imports.wasm"
+
+instantiations:
+  $input:
+    arguments:
+      "wasi:cli/stdout@0.2.0-rc-2023-11-10":
+        instance: "isolated-imports-parent"
+
+  "component:printer/printer":
+    arguments:
+      "wasi:cli/stdout@0.2.0-rc-2023-11-10":
+        instance: "isolated-imports-child"
+
